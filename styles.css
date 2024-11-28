@@ -1,0 +1,191 @@
+﻿/* Variables de color en :root */
+:root 
+{
+    --color-fondo: #f4f4f9; /* Fondo de la página */
+    --color-texto: #333; /* Texto general */
+    --color-encabezado: #2c3e50; /* Color de los encabezados */
+    --color-acento: #007bff; /* Color de acentos, enlaces, y botones */
+    --color-hover-boton: #0056b3; /* Color de fondo de los botones al pasar el ratón */
+    --color-fondo-boton: #007bff; /* Fondo de los botones */
+    --color-texto-boton: #ffffff; /* Texto de los botones */
+}
+/* Estilos generales */
+body 
+{
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Estilos para etiquetas HTML */
+h1 
+{
+    color: var(--color-encabezado);
+    text-align: center; /* Centramos el título principal */
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+h2 
+{
+    color: var(--color-encabezado);
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 15px;
+}
+
+p 
+{
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-texto);
+}
+
+/* Clases reutilizables */
+.centrado 
+{
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* Estilos específicos de secciones */
+#introduccion, #imagen, #recursos, #contacto, #impacto-desperdicio 
+{
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Imagen de banner a lo ancho */
+.banner-imagen img 
+{
+    width: 100%; /* La imagen ocupará todo el ancho de la pantalla */
+    height: 150px; /* Ajusta la altura para que sea delgada */
+    object-fit: cover; /* Recorta la imagen para ajustarse sin distorsionarse */
+}
+
+/* Centrar imagen dentro de "La realidad del desperdicio de alimentos" */
+.centrar-imagen 
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+    .centrar-imagen img 
+    {
+        border-radius: 5px;
+    }
+
+/* Enlaces */
+a 
+{
+    color: var(--color-acento);
+    text-decoration: none;
+}
+
+    a:hover 
+    {
+        text-decoration: underline;
+        color: var(--color-hover-boton);
+    }
+
+/* Botones */
+button 
+{
+    background-color: var(--color-fondo-boton);
+    color: var(--color-texto-boton);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover 
+    {
+        background-color: var(--color-hover-boton);
+    }
+
+/* Diseño responsivo */
+@media (max-width: 600px) 
+{
+    body 
+    {
+        padding: 10px;
+    }
+
+    section 
+    {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    h1, h2 
+    {
+        font-size: 24px;
+    }
+
+    button 
+    {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+/* Contenedor de la sección de contacto */
+.contacto-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Espacio entre las columnas */
+    margin-top: 20px;
+}
+
+/* Estilos para cada columna */
+.contacto-columna 
+{
+    flex: 1; /* Ambas columnas tendrán el mismo ancho */
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para resaltar */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+    /* Títulos de cada columna */
+    .contacto-columna h3 
+    {
+        margin-top: 0;
+        color: var(--color-encabezado);
+    }
+
+/* Enlaces como botones */
+.boton-enlace 
+{
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+    .boton-enlace:hover {
+        background-color: var(--color-hover-boton);
+    }
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 600px) 
+{
+    .contacto-contenedor 
+    {
+        flex-direction: column; /* Las columnas se apilan verticalmente */
+    }
+}
